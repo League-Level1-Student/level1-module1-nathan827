@@ -12,16 +12,17 @@ public class RaceCarRunner {
 		/* Do the following things without changing the RaceCar class */
 		
 		// 1. Create a RaceCar and place it in 5th position
-	new RaceCar(null, 5);
+	RaceCar racecar = new RaceCar("Mercedes", 5);
 		// 2. Print the RaceCar's position in the race
-System.out.println(new RaceCar(null, 5).getPositionInRace());
+System.out.println(racecar.getPositionInRace());
 		// 3. Crash the RaceCar
-		new RaceCar(null,5).crash();
+		racecar.crash();
 		// 4. If the car is damaged. Bring it in for a pit stop.
-if(new RaceCar(null, 5).damaged == true) {
-	new RaceCar(null,5).pit();
+if(racecar.damaged == true) {
+	racecar.pit();
 }
 		// 5. Help the car move into first place.
-
+for(int position = racecar.getPositionInRace(); position > 1; position -=1)
+racecar.overtake();
 	}
 }
